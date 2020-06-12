@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/greetingFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.nikiz.imgur.ui.fragment.SplashFragment"
+        android:label="splash_fragment"
+        tools:layout="@layout/splash_fragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_greetingFragment"
+            app:destination="@id/greetingFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/greetingFragment"
+        android:name="com.nikiz.imgur.ui.fragment.auth.GreetingFragment"
+        android:label="greeting_fragment"
+        tools:layout="@layout/greeting_fragment" >
+        <action
+            android:id="@+id/action_greetingFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.nikiz.imgur.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" />
+</navigation>

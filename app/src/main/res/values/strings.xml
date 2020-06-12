@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ImgUr</string>
+    <string name="greeting_text">Добро пожаловать в нормальный ImGur!</string>
+    <string name="greeting_description_first">Смотрите картинки и гифки,</string>
+    <string name="greeting_description_second">оценивайте их и загружайте свои.</string>
+    <string name="sign_up">Создать аккаунт</string>
+    <string name="sign_in">Войти</string>
+    <string name="skip_authorization">Войти анонимно</string>
 </resources>

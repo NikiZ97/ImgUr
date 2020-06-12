@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/greetingRoot"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.auth.GreetingFragment">
+
+    <ImageView
+        android:id="@+id/greetingImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="25dp"
+        android:src="@drawable/greeting_image"
+        android:layout_marginEnd="25dp"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/greetingText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/MainTextTheme"
+        android:textSize="24sp"
+        android:text="@string/greeting_text"
+        android:gravity="center"
+        android:lineHeight="25sp"
+        app:layout_constraintEnd_toEndOf="@id/greetingImage"
+        app:layout_constraintStart_toStartOf="@id/greetingImage"
+        app:layout_constraintTop_toBottomOf="@id/greetingImage"
+        android:layout_marginTop="60dp"
+        tools:ignore="UnusedAttribute" />
+    
+    <TextView
+        android:id="@+id/greetingDescriptionFirst"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/greetingText"
+        app:layout_constraintTop_toBottomOf="@id/greetingText"
+        android:layout_marginTop="10dp"
+        style="@style/MainTextTheme"
+        android:gravity="center"
+        android:text="@string/greeting_description_first"
+        android:layout_marginStart="66dp"
+        android:layout_marginEnd="66dp"
+        app:layout_constraintEnd_toEndOf="@id/greetingText" />
+
+    <TextView
+        android:id="@+id/greetingDescriptionSecond"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/greetingText"
+        app:layout_constraintEnd_toEndOf="@id/greetingText"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/greetingDescriptionFirst"
+        style="@style/MainTextTheme"
+        android:text="@string/greeting_description_second"
+        android:layout_marginStart="66dp"
+        android:layout_marginEnd="66dp" />
+
+    <Button
+        android:id="@+id/signIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/signUp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:textSize="12sp"
+        android:text="@string/sign_in"
+        android:lineHeight="17sp"
+        android:background="@drawable/layout_unselected_round_item"
+        android:layout_marginBottom="14dp"
+        tools:ignore="UnusedAttribute" />
+
+    <Button
+        android:id="@+id/signUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="60dp"
+        style="@style/MainTextTheme"
+        android:textSize="12sp"
+        android:text="@string/sign_up"
+        android:lineHeight="17sp"
+        android:background="@drawable/layout_selected_round_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="UnusedAttribute" />
+
+    <TextView
+        android:id="@+id/skipAuthorization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:textSize="14sp"
+        android:textColor="@color/colorSelectedItem"
+        app:layout_constraintTop_toBottomOf="@id/signUp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/signUp"
+        app:layout_constraintEnd_toEndOf="@id/signUp"
+        android:text="@string/skip_authorization" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
