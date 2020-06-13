@@ -1,4 +1,6 @@
 <resources>
+
+    <!-- AUTH -->
     <string name="app_name">ImgUr</string>
     <string name="greeting_text">Добро пожаловать в нормальный ImGur!</string>
     <string name="greeting_description_first">Смотрите картинки и гифки,</string>
@@ -6,4 +8,12 @@
     <string name="sign_up">Создать аккаунт</string>
     <string name="sign_in">Войти</string>
     <string name="skip_authorization">Войти анонимно</string>
+
+
+    <!-- MAIN -->
+    <string name="menu_feed">Лента</string>
+    <string name="menu_search">Поиск</string>
+    <string name="menu_upload">Загрузить</string>
+    <string name="menu_notifications">Уведомления</string>
+    <string name="menu_profile">Профиль</string>
 </resources>

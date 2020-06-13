@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/notificationsFragment"
+    android:id="@+id/notifications">
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.nikiz.imgur.ui.fragment.notifications.NotificationsFragment"
+        android:label="notifications_fragment"
+        tools:layout="@layout/notifications_fragment" />
+</navigation>

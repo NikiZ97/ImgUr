@@ -18,6 +18,8 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.google.com" }
     }
 }
 
@@ -30,6 +32,7 @@ ext {
     interceptor_version = "3.14.1"
     nav_version = "2.3.0-beta01"
     dagger_version = "2.27"
+    kotpref_version = "2.11.0"
 }
 
 task clean(type: Delete) {
