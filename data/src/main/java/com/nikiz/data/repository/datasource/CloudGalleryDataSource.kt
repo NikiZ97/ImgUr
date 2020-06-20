@@ -14,13 +14,15 @@ class CloudGalleryDataSource(private val imgurService: ImgurService,
                              private val galleryDao: GalleryDao,
                              private val galleryToGalleryEntityMapper: GalleryToGalleryEntityMapper,
                              private val galleryToGalleryModelMapper: GalleryToGalleryModelMapper) : GalleryDataStore {
-    override suspend fun getDefaultGalleryForDay(): GalleryModel {
+    override suspend fun getDefaultGalleryForDay(): List<GalleryModel> {
         try {
             val galleryAsync = imgurService.getDefaultGalleryForDay()
             val result = galleryAsync.await()
-            val galleryEntity = galleryToGalleryEntityMapper.map(result)
-            galleryDao.insertDefaultGallery(galleryEntity)
-            return galleryToGalleryModelMapper.map(result)
+            result.galleryData.forEach {
+                val galleryEntity = galleryToGalleryEntityMapper.map(it)
+                galleryDao.insertDefaultGallery(galleryEntity)
+            }
+            return galleryToGalleryModelMapper.map(result.galleryData)
         } catch (e: Exception) {
             throw ServerUnavailableException()
         }

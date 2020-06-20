@@ -12,5 +12,5 @@ interface GalleryDao {
     fun insertDefaultGallery(gallery: GalleryEntity)
 
     @Query("SELECT * FROM GalleryEntity")
-    suspend fun getDefaultGallery(): GalleryEntity
+    suspend fun getDefaultGallery(): List<GalleryEntity>
 }

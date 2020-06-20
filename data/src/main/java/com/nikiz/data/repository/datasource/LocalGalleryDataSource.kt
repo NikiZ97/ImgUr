@@ -9,7 +9,7 @@ class LocalGalleryDataSource(private val galleryDao: GalleryDao,
                              private val galleryEntityToGalleryModelMapper: GalleryEntityToGalleryModelMapper) :
     GalleryDataStore {
 
-    override suspend fun getDefaultGalleryForDay(): GalleryModel {
+    override suspend fun getDefaultGalleryForDay(): List<GalleryModel> {
         return galleryEntityToGalleryModelMapper.map(galleryDao.getDefaultGallery())
     }
 }

@@ -36,7 +36,7 @@ data class GalleryData(
     @SerializedName("datetime")
     val datetime: Int,
     @SerializedName("description")
-    val description: Any,
+    val description: String,
     @SerializedName("downs")
     val downs: Int,
     @SerializedName("edited")
@@ -78,7 +78,7 @@ data class GalleryData(
     @SerializedName("mp4")
     val mp4: String,
     @SerializedName("mp4_size")
-    val mp4_size: Int,
+    val mp4Size: Int,
     @SerializedName("nsfw")
     val nsfw: Boolean,
     @SerializedName("points")
@@ -98,7 +98,7 @@ data class GalleryData(
     @SerializedName("topic")
     val topic: String,
     @SerializedName("topic_id")
-    val topic_id: Int,
+    val topicId: Int,
     @SerializedName("type")
     val type: String,
     @SerializedName("ups")
@@ -106,54 +106,52 @@ data class GalleryData(
     @SerializedName("views")
     val views: Int,
     @SerializedName("vote")
-    val vote: Any,
+    val vote: Boolean,
     @SerializedName("width")
     val width: Int
 )
 
 data class Image(
     @SerializedName("account_id")
-    val account_id: Any,
+    val accountId: Int,
     @SerializedName("account_url")
-    val account_url: Any,
+    val accountUrl: String,
     @SerializedName("ad_type")
-    val ad_type: Int,
+    val adType: Int,
     @SerializedName("ad_url")
-    val ad_url: String,
+    val adUrl: String,
     @SerializedName("animated")
     val animated: Boolean,
     @SerializedName("bandwidth")
     val bandwidth: Long,
     @SerializedName("comment_count")
-    val comment_count: Any,
+    val commentCount: Int,
     @SerializedName("datetime")
     val datetime: Int,
     @SerializedName("description")
     val description: String,
     @SerializedName("downs")
-    val downs: Any,
+    val downs: Int,
     @SerializedName("edited")
     val edited: String,
     @SerializedName("favorite")
     val favorite: Boolean,
     @SerializedName("favorite_count")
-    val favorite_count: Any,
+    val favoriteCount: Int,
     @SerializedName("gifv")
     val gifv: String,
     @SerializedName("has_sound")
-    val has_sound: Boolean,
+    val hasSound: Boolean,
     @SerializedName("height")
     val height: Int,
     @SerializedName("hls")
     val hls: String,
-    @SerializedName("id")
-    val id: String,
     @SerializedName("in_gallery")
-    val in_gallery: Boolean,
+    val inGallery: Boolean,
     @SerializedName("in_most_viral")
-    val in_most_viral: Boolean,
+    val inMostViral: Boolean,
     @SerializedName("is_ad")
-    val is_ad: Boolean,
+    val isAd: Boolean,
     @SerializedName("link")
     val link: String,
     @SerializedName("looping")
@@ -161,15 +159,15 @@ data class Image(
     @SerializedName("mp4")
     val mp4: String,
     @SerializedName("mp4_size")
-    val mp4_size: Int,
+    val mp4Size: Int,
     @SerializedName("nsfw")
-    val nsfw: Any,
+    val nsfw: Boolean,
     @SerializedName("points")
-    val points: Any,
+    val points: Int,
     @SerializedName("score")
-    val score: Any,
+    val score: Int,
     @SerializedName("section")
-    val section: Any,
+    val section: String,
     @SerializedName("size")
     val size: Int,
     @SerializedName("tags")
@@ -183,7 +181,7 @@ data class Image(
     @SerializedName("views")
     val views: Int,
     @SerializedName("vote")
-    val vote: Any,
+    val vote: Boolean,
     @SerializedName("width")
     val width: Int
 )
@@ -192,31 +190,31 @@ data class Tag(
     @SerializedName("accent")
     val accent: String,
     @SerializedName("background_hash")
-    val background_hash: String,
+    val backgroundHash: String,
     @SerializedName("background_is_animated")
-    val background_is_animated: Boolean,
+    val backgroundIsAnimated: Boolean,
     @SerializedName("description")
     val description: String,
     @SerializedName("display_name")
-    val display_name: String,
+    val displayName: String,
     @SerializedName("followers")
     val followers: Int,
     @SerializedName("following")
     val following: Boolean,
     @SerializedName("is_promoted")
-    val is_promoted: Boolean,
+    val isPromoted: Boolean,
     @SerializedName("is_whitelisted")
-    val is_whitelisted: Boolean,
+    val isWhitelisted: Boolean,
     @SerializedName("logo_destination_url")
-    val logo_destination_url: Any,
+    val logoDestinationUrl: String,
     @SerializedName("logo_hash")
-    val logo_hash: Any,
+    val logoHash: String,
     @SerializedName("name")
     val name: String,
     @SerializedName("thumbnail_hash")
-    val thumbnail_hash: Any,
+    val thumbnailHash: String,
     @SerializedName("thumbnail_is_animated")
-    val thumbnail_is_animated: Boolean,
+    val thumbnailIsAnimated: Boolean,
     @SerializedName("total_items")
-    val total_items: Int
+    val totalItems: Int
 )
