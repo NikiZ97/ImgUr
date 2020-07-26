@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface ImgurService {
 
-    @GET("hot/viral/day/1?showViral=true&mature=true&album_previews=true")
+    @GET("gallery/hot/viral/day/1?showViral=true&mature=true&album_previews=true")
     fun getDefaultGalleryForDay(): Deferred<Gallery>
 }

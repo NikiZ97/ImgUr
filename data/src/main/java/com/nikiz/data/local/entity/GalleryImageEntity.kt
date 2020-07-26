@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.nikiz.data.network.model.Tag
 
-@Entity(tableName = GalleryEntity.TABLE_NAME)
+@Entity(tableName = GalleryImageEntity.TABLE_NAME)
 class GalleryImageEntity(
     @ColumnInfo(name = "account_id")
     val accountId: Int,

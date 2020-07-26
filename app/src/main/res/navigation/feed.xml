@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/feedFragment"
-        android:name="com.nikiz.imgur.ui.fragment.feed.FeedFragment"
+        android:name="com.nikiz.imgur.ui.fragment.gallery.GalleryFragment"
         android:label="feed_fragment"
         tools:layout="@layout/feed_fragment" />
 </navigation>

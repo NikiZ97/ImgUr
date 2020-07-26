@@ -7,7 +7,7 @@ import com.nikiz.domain.model.GalleryModel
 import com.nikiz.domain.model.Image
 import com.nikiz.domain.model.Tag
 
-class GalleryEntityToGalleryModelMapper : Mapper<GalleryEntity, GalleryModel> {
+class GalleryEntityToGalleryModelMapper constructor() : Mapper<GalleryEntity, GalleryModel> {
     override fun map(model: GalleryEntity): GalleryModel {
         return GalleryModel(model.accountId, model.accountUrl, model.adType,
             model.adUrl, model.animated, model.bandwidth, model.commentCount, model.cover,
