@@ -8,8 +8,10 @@ import com.nikiz.data.mapper.GalleryToGalleryEntityMapper
 import com.nikiz.data.mapper.GalleryToGalleryModelMapper
 import com.nikiz.data.mapper.Mapper
 import com.nikiz.data.network.ImgurService
+import com.nikiz.data.network.interceptor.ClientIdHeaderInterceptor
 import com.nikiz.data.network.model.GalleryData
 import com.nikiz.domain.model.GalleryModel
+import com.nikiz.imgur.BuildConfig
 import com.nikiz.imgur.utils.Constants
 import dagger.Module
 import dagger.Provides
@@ -41,10 +43,18 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
+    fun provideOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor,
+                            clientIdHeaderInterceptor: ClientIdHeaderInterceptor): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(httpLoggingInterceptor)
+            .addInterceptor(clientIdHeaderInterceptor)
             .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideClientIdHeaderInterceptor(): ClientIdHeaderInterceptor {
+        return ClientIdHeaderInterceptor(BuildConfig.API_CLIENT_ID)
     }
 
     @Provides

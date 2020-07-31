@@ -19,8 +19,8 @@ class GalleryToGalleryModelMapper: Mapper<GalleryData, GalleryModel> {
             model.ups, model.views, model.vote, model.width
         )
     }
-    private fun getImages(entityImages: NetworkImages): List<Image> {
-        return entityImages.map { mapEntity(it) }
+    private fun getImages(entityImages: NetworkImages?): List<Image>? {
+        return entityImages?.map { mapEntity(it) }
     }
 
     private fun mapEntity(it: NetworkImage) =
@@ -31,8 +31,8 @@ class GalleryToGalleryModelMapper: Mapper<GalleryData, GalleryModel> {
             it.section, it.mp4Size, getTags(it.tags), it.title, it.type, it.ups, it.views, it.vote,
             it.width)
 
-    private fun getTags(tags: NetworkTags): List<Tag> {
-        return tags.map { mapEntityTag(it) }
+    private fun getTags(tags: NetworkTags?): List<Tag>? {
+        return tags?.map { mapEntityTag(it) }
     }
 
     private fun mapEntityTag(it: NetworkTag) =

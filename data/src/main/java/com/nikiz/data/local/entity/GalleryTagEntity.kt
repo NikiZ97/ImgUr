@@ -7,35 +7,35 @@ import androidx.room.PrimaryKey
 @Entity(tableName = GalleryTagEntity.TABLE_NAME)
 class GalleryTagEntity(
     @ColumnInfo(name = "accent")
-    val accent: String,
+    val accent: String?,
     @ColumnInfo(name = "background_hash")
-    val backgroundHash: String,
+    val backgroundHash: String?,
     @ColumnInfo(name = "background_is_animated")
-    val backgroundIsAnimated: Boolean,
+    val backgroundIsAnimated: Boolean?,
     @ColumnInfo(name = "description")
-    val description: String,
+    val description: String?,
     @ColumnInfo(name = "display_name")
-    val displayName: String,
+    val displayName: String?,
     @ColumnInfo(name = "followers")
-    val followers: Int,
+    val followers: Int?,
     @ColumnInfo(name = "following")
-    val following: Boolean,
+    val following: Boolean?,
     @ColumnInfo(name = "is_promoted")
-    val isPromoted: Boolean,
+    val isPromoted: Boolean?,
     @ColumnInfo(name = "is_whitelisted")
-    val isWhitelisted: Boolean,
+    val isWhitelisted: Boolean?,
     @ColumnInfo(name = "logo_destination_url")
-    val logoDestinationUrl: String,
+    val logoDestinationUrl: String?,
     @ColumnInfo(name = "logo_hash")
-    val logoHash: String,
+    val logoHash: String?,
     @ColumnInfo(name = "name")
-    val name: String,
+    val name: String?,
     @ColumnInfo(name = "thumbnail_hash")
-    val thumbnailHash: String,
+    val thumbnailHash: String?,
     @ColumnInfo(name = "thumbnail_is_animated")
-    val thumbnailIsAnimated: Boolean,
+    val thumbnailIsAnimated: Boolean?,
     @ColumnInfo(name = "total_items")
-    val totalItems: Int,
+    val totalItems: Int?,
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
     val id: Long? = null

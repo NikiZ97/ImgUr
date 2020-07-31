@@ -22,8 +22,8 @@ class GalleryEntityToGalleryModelMapper constructor() : Mapper<GalleryEntity, Ga
         )
     }
 
-    private fun getImages(entityImages: List<GalleryImageEntity>): List<Image> {
-        return entityImages.map { mapEntity(it) }
+    private fun getImages(entityImages: List<GalleryImageEntity>?): List<Image>? {
+        return entityImages?.map { mapEntity(it) }
     }
 
     private fun mapEntity(it: GalleryImageEntity) =
@@ -34,8 +34,8 @@ class GalleryEntityToGalleryModelMapper constructor() : Mapper<GalleryEntity, Ga
             it.section, it.mp4Size, getTags(it.tags), it.title, it.type, it.ups, it.views, it.vote,
             it.width)
 
-    private fun getTags(tags: List<GalleryTagEntity>): List<Tag> {
-        return tags.map { mapEntityTag(it) }
+    private fun getTags(tags: List<GalleryTagEntity>?): List<Tag>? {
+        return tags?.map { mapEntityTag(it) }
     }
 
     private fun mapEntityTag(it: GalleryTagEntity) =

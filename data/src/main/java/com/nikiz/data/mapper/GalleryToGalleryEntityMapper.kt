@@ -25,8 +25,8 @@ class GalleryToGalleryEntityMapper : Mapper<GalleryData, GalleryEntity> {
         )
     }
 
-    private fun getImages(entityImages: NetworkImages): List<GalleryImageEntity> {
-        return entityImages.map { mapEntity(it) }
+    private fun getImages(entityImages: NetworkImages?): List<GalleryImageEntity>? {
+        return entityImages?.map { mapEntity(it) }
     }
 
     private fun mapEntity(it: NetworkImage) =
@@ -37,8 +37,8 @@ class GalleryToGalleryEntityMapper : Mapper<GalleryData, GalleryEntity> {
             it.section, it.mp4Size, getTags(it.tags), it.title, it.type, it.ups, it.views, it.vote,
             it.width)
 
-    private fun getTags(tags: NetworkTags): List<GalleryTagEntity> {
-        return tags.map { mapEntityTag(it) }
+    private fun getTags(tags: NetworkTags?): List<GalleryTagEntity>? {
+        return tags?.map { mapEntityTag(it) }
     }
 
     private fun mapEntityTag(it: NetworkTag) =

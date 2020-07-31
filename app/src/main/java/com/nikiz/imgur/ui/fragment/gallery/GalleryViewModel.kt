@@ -10,6 +10,7 @@ import com.nikiz.domain.model.GalleryModel
 import com.nikiz.domain.usecase.DataState
 import com.nikiz.domain.usecase.GetDefaultGalleryUseCase
 import com.nikiz.imgur.utils.SingleLiveEvent
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 
@@ -22,8 +23,8 @@ class GalleryViewModel @ViewModelInject constructor(
     val defaultGallery: LiveData<DataState<List<GalleryModel>>> = _defaultGallery
 
     fun getDefaultGallery() {
-        viewModelScope.launch {
-            _defaultGallery.value = defaultGalleryUseCase.getDefaultGallery()
+        viewModelScope.launch(Dispatchers.Default) {
+            _defaultGallery.postValue(defaultGalleryUseCase.getDefaultGallery())
         }
     }
 }

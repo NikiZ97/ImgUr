@@ -20,7 +20,7 @@ class CloudGalleryDataSource(private val imgurService: ImgurService,
             val galleryAsync = imgurService.getDefaultGalleryForDay()
             val result = galleryAsync.await()
             val galleryModels = mutableListOf<GalleryModel>()
-            result.galleryData.forEach {
+            result.galleryData?.forEach {
                 val galleryEntity = galleryToGalleryEntityMapper.map(it)
                 val galleryModel = galleryToGalleryModelMapper.map(it)
                 galleryModels.add(galleryModel)

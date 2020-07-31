@@ -10,99 +10,99 @@ import com.nikiz.data.network.model.Tag
 @Entity(tableName = GalleryEntity.TABLE_NAME)
 class GalleryEntity(
     @ColumnInfo(name = "account_id")
-    val accountId: Int,
+    val accountId: Int?,
     @ColumnInfo(name = "account_url")
-    val accountUrl: String,
+    val accountUrl: String?,
     @ColumnInfo(name = "ad_type")
-    val adType: Int,
+    val adType: Int?,
     @ColumnInfo(name = "ad_url")
-    val adUrl: String,
+    val adUrl: String?,
     @ColumnInfo(name = "animated")
-    val animated: Boolean,
+    val animated: Boolean?,
     @ColumnInfo(name = "bandwidth")
-    val bandwidth: Long,
+    val bandwidth: Long?,
     @ColumnInfo(name = "comment_count")
-    val commentCount: Int,
+    val commentCount: Int?,
     @ColumnInfo(name = "cover")
-    val cover: String,
+    val cover: String?,
     @ColumnInfo(name = "cover_height")
-    val coverHeight: Int,
+    val coverHeight: Int?,
     @ColumnInfo(name = "cover_width")
-    val cover_width: Int,
+    val cover_width: Int?,
     @ColumnInfo(name = "datetime")
-    val datetime: Int,
+    val datetime: Int?,
     @ColumnInfo(name = "description")
-    val description: String,
+    val description: String?,
     @ColumnInfo(name = "downs")
-    val downs: Int,
+    val downs: Int?,
     @ColumnInfo(name = "edited")
-    val edited: Int,
+    val edited: Int?,
     @ColumnInfo(name = "favorite")
-    val favorite: Boolean,
+    val favorite: Boolean?,
     @ColumnInfo(name = "favorite_count")
-    val favoriteCount: Int,
+    val favoriteCount: Int?,
     @ColumnInfo(name = "gifv")
-    val gifv: String,
+    val gifv: String?,
     @ColumnInfo(name = "has_sound")
-    val hasSound: Boolean,
+    val hasSound: Boolean?,
     @ColumnInfo(name = "height")
-    val height: Int,
+    val height: Int?,
     @ColumnInfo(name = "hls")
-    val hls: String,
+    val hls: String?,
     @ColumnInfo(name = "images")
-    val images: List<GalleryImageEntity>,
+    val images: List<GalleryImageEntity>?,
     @ColumnInfo(name = "images_count")
-    val imagesCount: Int,
+    val imagesCount: Int?,
     @ColumnInfo(name = "in_gallery")
-    val inGallery: Boolean,
+    val inGallery: Boolean?,
     @ColumnInfo(name = "in_most_viral")
-    val inMostViral: Boolean,
+    val inMostViral: Boolean?,
     @ColumnInfo(name = "include_album_ads")
-    val includeAlbumAds: Boolean,
+    val includeAlbumAds: Boolean?,
     @ColumnInfo(name = "is_ad")
-    val isAd: Boolean,
+    val isAd: Boolean?,
     @ColumnInfo(name = "is_album")
-    val isAlbum: Boolean,
+    val isAlbum: Boolean?,
     @ColumnInfo(name = "layout")
-    val layout: String,
+    val layout: String?,
     @ColumnInfo(name = "link")
-    val link: String,
+    val link: String?,
     @ColumnInfo(name = "looping")
-    val looping: Boolean,
+    val looping: Boolean?,
     @ColumnInfo(name = "mp4")
-    val mp4: String,
+    val mp4: String?,
     @ColumnInfo(name = "mp4_size")
-    val mp4Size: Int,
+    val mp4Size: Int?,
     @ColumnInfo(name = "nsfw")
-    val nsfw: Boolean,
+    val nsfw: Boolean?,
     @ColumnInfo(name = "points")
-    val points: Int,
+    val points: Int?,
     @ColumnInfo(name = "privacy")
-    val privacy: String,
+    val privacy: String?,
     @ColumnInfo(name = "score")
-    val score: Int,
+    val score: Int?,
     @ColumnInfo(name = "section")
-    val section: String,
+    val section: String?,
     @ColumnInfo(name = "size")
-    val size: Int,
+    val size: Int?,
     @ColumnInfo(name = "tags")
-    val tags: List<GalleryTagEntity>,
+    val tags: List<GalleryTagEntity>?,
     @ColumnInfo(name = "title")
-    val title: String,
+    val title: String?,
     @ColumnInfo(name = "topic")
-    val topic: String,
+    val topic: String?,
     @ColumnInfo(name = "topic_id")
-    val topicId: Int,
+    val topicId: Int?,
     @ColumnInfo(name = "type")
-    val type: String,
+    val type: String?,
     @ColumnInfo(name = "ups")
-    val ups: Int,
+    val ups: Int?,
     @ColumnInfo(name = "views")
-    val views: Int,
+    val views: Int?,
     @ColumnInfo(name = "vote")
-    val vote: Boolean,
+    val vote: Boolean?,
     @ColumnInfo(name = "width")
-    val width: Int,
+    val width: Int?,
     @PrimaryKey
     @ColumnInfo(name = "id")
     val id: Long? = null

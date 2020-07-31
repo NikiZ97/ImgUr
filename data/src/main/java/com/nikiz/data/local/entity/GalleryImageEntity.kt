@@ -8,77 +8,77 @@ import com.nikiz.data.network.model.Tag
 @Entity(tableName = GalleryImageEntity.TABLE_NAME)
 class GalleryImageEntity(
     @ColumnInfo(name = "account_id")
-    val accountId: Int,
+    val accountId: Int?,
     @ColumnInfo(name = "account_url")
-    val accountUrl: String,
+    val accountUrl: String?,
     @ColumnInfo(name = "ad_type")
-    val adType: Int,
+    val adType: Int?,
     @ColumnInfo(name = "ad_url")
-    val adUrl: String,
+    val adUrl: String?,
     @ColumnInfo(name = "animated")
-    val animated: Boolean,
+    val animated: Boolean?,
     @ColumnInfo(name = "bandwidth")
-    val bandwidth: Long,
+    val bandwidth: Long?,
     @ColumnInfo(name = "comment_count")
-    val commentCount: Int,
+    val commentCount: Int?,
     @ColumnInfo(name = "datetime")
-    val datetime: Int,
+    val datetime: Int?,
     @ColumnInfo(name = "description")
-    val description: String,
+    val description: String?,
     @ColumnInfo(name = "downs")
-    val downs: Int,
+    val downs: Int?,
     @ColumnInfo(name = "edited")
-    val edited: String,
+    val edited: String?,
     @ColumnInfo(name = "favorite")
-    val favorite: Boolean,
+    val favorite: Boolean?,
     @ColumnInfo(name = "favorite_count")
-    val favoriteCount: Int,
+    val favoriteCount: Int?,
     @ColumnInfo(name = "gifv")
-    val gifv: String,
+    val gifv: String?,
     @ColumnInfo(name = "has_sound")
-    val hasSound: Boolean,
+    val hasSound: Boolean?,
     @ColumnInfo(name = "height")
-    val height: Int,
+    val height: Int?,
     @ColumnInfo(name = "hls")
-    val hls: String,
+    val hls: String?,
     @ColumnInfo(name = "in_gallery")
-    val inGallery: Boolean,
+    val inGallery: Boolean?,
     @ColumnInfo(name = "in_most_viral")
-    val inMostViral: Boolean,
+    val inMostViral: Boolean?,
     @ColumnInfo(name = "is_ad")
-    val isAd: Boolean,
+    val isAd: Boolean?,
     @ColumnInfo(name = "link")
-    val link: String,
+    val link: String?,
     @ColumnInfo(name = "looping")
-    val looping: Boolean,
+    val looping: Boolean?,
     @ColumnInfo(name = "mp4")
-    val mp4: String,
+    val mp4: String?,
     @ColumnInfo(name = "mp4_size")
-    val mp4Size: Int,
+    val mp4Size: Int?,
     @ColumnInfo(name = "nsfw")
-    val nsfw: Boolean,
+    val nsfw: Boolean?,
     @ColumnInfo(name = "points")
-    val points: Int,
+    val points: Int?,
     @ColumnInfo(name = "score")
-    val score: Int,
+    val score: Int?,
     @ColumnInfo(name = "section")
-    val section: String,
+    val section: String?,
     @ColumnInfo(name = "size")
-    val size: Int,
+    val size: Int?,
     @ColumnInfo(name = "tags")
-    val tags: List<GalleryTagEntity>,
+    val tags: List<GalleryTagEntity>?,
     @ColumnInfo(name = "title")
-    val title: String,
+    val title: String?,
     @ColumnInfo(name = "type")
-    val type: String,
+    val type: String?,
     @ColumnInfo(name = "ups")
-    val ups: Int,
+    val ups: Int?,
     @ColumnInfo(name = "views")
-    val views: Int,
+    val views: Int?,
     @ColumnInfo(name = "vote")
-    val vote: Boolean,
+    val vote: Boolean?,
     @ColumnInfo(name = "width")
-    val width: Int,
+    val width: Int?,
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
     val id: Long? = null
