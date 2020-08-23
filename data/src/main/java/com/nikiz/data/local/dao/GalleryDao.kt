@@ -11,6 +11,6 @@ interface GalleryDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertDefaultGallery(gallery: GalleryEntity)
 
-    @Query("SELECT * FROM GalleryEntity")
+    @Query("SELECT * FROM GalleryEntity LIMIT 10")
     suspend fun getDefaultGallery(): List<GalleryEntity>
 }
